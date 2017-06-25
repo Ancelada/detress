@@ -1,0 +1,35 @@
+.search_icon i{
+	margin-left:10px;
+}
+
+.search_icon{
+	background-color:#fff;
+	height:23px;
+	cursor:pointer;
+}
+
+.topbar_content_left{
+	background-color:purple;
+}
+
+.topbar_wrapper{
+	height:50px;
+	background-color:#000;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.topbar_content{
+	background-color:#333;
+	margin-top:4px;
+}
+
+
+/* для samsung */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+
+	.topbar_wrapper{
+		height:20px;	
+	}
+
+}

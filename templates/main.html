@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta content="user-scalable=yes" name="viewport" initial-scale="1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="{{meta.Description}}" />
+  <meta name="google-site-verification" content="cpVez0tOEh51g5wkPaQl0iLsWxg2b_JnaFxkD0RiE_c" />
+  <title>{{meta.Title}}</title>
+	{% load staticfiles %}
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+
+  <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/foundation.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.waitforimages.js' %}"></script>
+
+
+  <script type="application/ld+json">
+    {{json_ld.jsons|safe}};
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+  <link rel="stylesheet" href="{% static 'css/foundation-flex.css' %}">
+  <link rel="stylesheet" href="{% static 'css/foundation-icons/foundation-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/foundation-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/top/topbar.css'%}">
+</head>
+<body>
+  
+  <div class="topbar_wrapper color_fff font_roboto transition uppercase large-12 small-12 columns nopadding">
+    <div class="row topbar_content nopadding">
+      <div class="topbar_content_left large-4 small-12 columns height_inherit nopadding">
+        <div class="large-11 small-11 columns nopadding">
+          <input type="text" class="input_small" placeholder="поиск, напишите что Вы ищите...">          
+        </div>
+        <div class="large-1 small-1 columns nopadding">
+          <div class="search_icon height_inherit">
+            <i class="fi-magnifying-glass color_000">
+              
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% csrf_token %}
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- конец блока содержания-->
+  <script>
+    //ajax запрос
+    var makeAjax = function(parameters){
+      $.ajax({
+          type: "POST",
+          url: "/ajax/",
+          data: JSON.stringify(parameters),
+          contentType: "application/json; charset=utf-8",
+          headers: {
+            'X-CSRFToken': getCookie('csrftoken')
+          },
+          dataType: "json",
+          async: true,
+          success: function(data, textStatus, jqXHR){
+
+          }
+      });
+    }
+
+    //построить cookie в данном случае для csrf_token
+    var getCookie = function(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = jQuery.trim(cookies[i]);
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+    }
+  </script>
+</body>
