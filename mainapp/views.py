@@ -1,5 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .base import Base
+
 def mainpage(request):
-	return render(request, 'mainpage.html')
+
+	menubar = Base().build_menubar()
+
+	content = None
+
+	return render(request, 'main.html', {
+		'top': {
+			'menubar': menubar, 
+		},
+		'content': content,
+	})

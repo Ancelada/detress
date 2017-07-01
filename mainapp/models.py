@@ -6,6 +6,7 @@ class Unit(MPTTModel):
 	description = models.TextField(null=True, blank=True)
 	short_description = models.TextField(null=True, blank=True)
 	parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
+	image = models.ImageField(blank=True, null=True)
 	cost = models.IntegerField(null=True, blank=True)
 
 	def __str__(self):

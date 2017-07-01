@@ -1,0 +1,36 @@
+.mobile_menu_button{
+	display:none;
+}
+
+.logobar_wrapper{
+	height:105px;
+}
+
+.logo_wrapper{
+	margin-top:15px;
+	text-align: center;
+}
+
+.logo_wrapper img{
+	height:75px;
+}
+
+/* для смартфонов */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+	.logobar_wrapper{
+		height:200px;
+	}
+
+	.logo_wrapper img{
+		height:200px;
+	}
+
+	.mobile_menu_button{
+		display:block;
+		padding-left:50px;
+	}
+	.mobile_menu_button_ico{
+		font-size:150px;
+		cursor:pointer;
+	}
+}
