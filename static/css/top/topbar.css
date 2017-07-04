@@ -1,6 +1,14 @@
 .bag_ico_wrapper{
 	padding-left:5px;
 }
+.bag_ico_wrapper span{
+	position:relative;
+	top:-3px;
+}
+
+.bag_ico_wrapper img{
+	height:18px;
+}
 
 .bag_wrapper{
 	cursor:pointer;
@@ -36,12 +44,13 @@
 
 .login_content{
 	padding:15px;
-	width:150px;
+	width:180px;
 	background-color:#fff;
 	position:absolute;
 	top:30px;
 	border:1px solid #361134;
 	display:none;
+	z-index: 101;
 }
 
 .login_wrapper:hover{
@@ -69,10 +78,10 @@
 	border-color: #fff transparent transparent transparent;
 }
 
-.login_text, .bag_text, .bag_count, .bag_rur{
-	font-size:11px;
+/* .login_text, .bag_text, .bag_count, .bag_rur{
+	font-size:13px;
 	letter-spacing: 0px;
-}
+} */
 
 .topbar_content_center{
 }
@@ -172,8 +181,8 @@
 	}
 	.login_content{
 		width:460px;
-		top:192px;
-		border: 2px solid #361134;
+		top:184px;
+		border: 2px solid #a4baba;
 	}
 
 	.login_content_line{
@@ -198,7 +207,7 @@
 		border: 3px dashed #b0228c;
 	}
 
-	.bag_ico_wrapper i{
-		font-size:35px;
+	.bag_ico_wrapper img{
+		height:40px;
 	}
 }

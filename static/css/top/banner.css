@@ -1,0 +1,51 @@
+.nomargin{
+	margin:0;
+}
+
+.banner_item_image_wrapper{
+	text-align: center;
+	height:100%;
+	padding-top:10px;
+}
+
+.banner_item_text{
+	color:#361134;
+	line-height: 1.3;
+}
+
+.banner_item_down{
+	height:30%;
+	/* background-color: #bbb; */
+	text-align: center;
+}
+
+.banner_item_up{
+	height:70%;
+	/* background-color:#aaa; */
+}
+
+.banner_item{
+	/* background-color:#ccc; */
+}
+
+.banner_wrapper{
+	/* height:160px; */
+}
+
+.banner_content{
+	background-color:#fff;
+}
+
+/* для смартфонов */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+	.banner_item_text{
+		line-height: 1;
+	}
+	.banner_item{
+		height:250px;
+		border-bottom:1px solid #a4baba;
+	}
+	.banner_item_image_wrapper img{
+		height:150px;
+	}
+}

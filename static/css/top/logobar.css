@@ -1,24 +1,33 @@
+.logo_content{
+	font-size:90px;
+	line-height: 0.7;
+	color:#361134;
+	/* text-shadow: 0 0 0.2em #b0228c, 0 0 0.2em #b0228c,
+	        0 0 0.2em #b0228c; */
+}
+
 .mobile_menu_button{
 	display:none;
 }
 
 .logobar_wrapper{
-	height:105px;
+	height:175px;
 }
 
 .logo_wrapper{
-	margin-top:15px;
+	padding-top:20px;
 	text-align: center;
+	background-color:#fff;
 }
 
 .logo_wrapper img{
-	height:75px;
+	height:105px;
 }
 
 /* для смартфонов */
 @media screen and (min-width: 640px) and (max-width: 1023px) {
 	.logobar_wrapper{
-		height:200px;
+		height:250px;
 	}
 
 	.logo_wrapper img{
@@ -32,5 +41,8 @@
 	.mobile_menu_button_ico{
 		font-size:150px;
 		cursor:pointer;
+	}
+	.logobar_content{
+		background-color:#fff;
 	}
 }

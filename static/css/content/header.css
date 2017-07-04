@@ -1,0 +1,24 @@
+.page_head_line{
+	border-bottom: 1px solid #361134;
+}
+
+.page_head_text{
+	font-size:30px;
+	color:#361134;
+}
+
+.page_head{
+	height:60px;
+	background-color:#fff;
+}
+
+/* для смартфонов */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+	.page_head_text{
+		font-size:60px;
+	}
+
+	.page_head{
+		height:160px;
+	}
+}
