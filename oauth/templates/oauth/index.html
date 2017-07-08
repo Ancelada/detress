@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth Test</title>
+</head>
+<body>
+
+    {% if request.session.authorized %}
+        <h3>Welcome {{ request.session.name }}</h3>
+    {% else %}
+        <p>
+            Authorize through:
+            <ul>
+                {% for link in links %}
+                    <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </p>
+    {% endif %}
+
+</body>
+</html>

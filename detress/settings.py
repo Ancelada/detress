@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_mysql',
     'django_mptt_admin',
     'mainapp',
+    'oauth',
 ]
 
 MIDDLEWARE = [

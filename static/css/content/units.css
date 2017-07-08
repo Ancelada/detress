@@ -11,12 +11,15 @@
 }
 
 .page_unit_content_wrapper{
+	cursor:pointer;
 }
 
 .page_unit_content_description{
 	background-color:rgba(255,230,222, .5);
 	color:#361134;
 	height: 85%;
+	padding-left:45px;
+	padding-right:45px;
 }
 
 .page_unit_content_header{
@@ -48,4 +51,27 @@
 
 .page_units{
 	background-color:#ccc;
+}
+
+/* для смартфонов */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+	
+	.page_unit{
+		height: 1000px;
+		background-color:#fff;
+		padding:15px;
+	}	
+
+	.page_unit_content_header h2{
+		font-size:90px;
+	}
+
+	.page_unit_content_wrapper:hover{
+		margin-top:0;
+	}
+
+	.page_unit_content_hoverable:hover + .page_unit_content_wrapper{
+		margin-top:0;
+	}
+
 }

@@ -12,6 +12,10 @@
 	background-color:#fff;
 }
 
+.ico_decoration img{
+	margin-top:-20px;
+}
+
 /* для смартфонов */
 @media screen and (min-width: 640px) and (max-width: 1023px) {
 	.page_head_text{
@@ -19,6 +23,6 @@
 	}
 
 	.page_head{
-		height:160px;
+		height:110px;
 	}
 }

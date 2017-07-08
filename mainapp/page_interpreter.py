@@ -13,13 +13,14 @@ class PageInterpreter():
 
 	def build_page(self, page):
 
-		page_head = Unit.objects.get(name=self.page[page]['name'])
+		page_unit = Unit.objects.get(name=self.page[page]['name'])
 
-		units = Unit.objects.filter(parent_id=page_head.id)
+		units = Unit.objects.filter(parent_id=page_unit.id)
 
 		result = render_to_string(self.page[page]['html'], {
-			'page_head': page_head,
+			'page_head': page_unit,
 			'units': units,
+			'page_text': page_unit,
 		})
 
 		return result

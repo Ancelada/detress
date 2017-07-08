@@ -1,0 +1,117 @@
+<div class="topbar_wrapper color_fff font_garamond transition uppercase large-12 small-12 columns nopadding">
+  <div class="row topbar_content nopadding">
+
+    <div class="topbar_content_left transition large-3 small-12 columns height_inherit nopadding">
+      <div class="large-11 small-11 columns nopadding">
+        <input type="text" class="input_small" placeholder="поиск, напишите что Вы ищите...">          
+      </div>
+      <div class="large-1 small-1 columns nopadding">
+        <div class="search_icon height_inherit">
+          <i class="fi-magnifying-glass color_000">
+            
+          </i>
+        </div>
+      </div>
+    </div>
+
+    <div class="topbar_content_center large-5 small-12 columns height_inherit nopadding">
+    </div>
+
+    
+    <div class="topbar_content_right large-4 small-12 columns height_inherit nopadding">
+
+      <!-- панель login -->
+      <div class="large-4 small-6 columns height_inherit nopadding">
+        <div class="login_wrapper large-12 small-12 columns height_inherit nopadding font_inherit transition" tabindex="1">
+          <div class="triangle_wrapper large-2 small-2 columns nopadding">
+            <div class="triangle">
+            </div>
+          </div>
+          {% if request.session.authorized %}
+            <div class="large-10 small-10 columns nopadding">
+              <span class="span_small" title="{{request.session.name}}">{{ request.session.name }}</span>            
+            </div>
+          {% else %}
+            <div class="large-10 small-10 columns nopadding">
+              <span class="span_small">войти через</span>        
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="login_content large-12 small-12 columns nopadding">
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="{{ vk.url }}">вконтакте</a>
+            </span>
+          </div>
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="#">одноклассники</a>
+            </span>  
+          </div>
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="{{ fb.url }}">facebook</a>
+            </span>  
+          </div>
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="#">twitter</a>
+            </span>  
+          </div>
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="#">mail.ru</a>
+            </span>  
+          </div>
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="{{ ya.url }}">яндекс</a>
+            </span>  
+          </div>
+
+          <div class="large-12 small-12 columns nopadding login_content_line">
+            <span class="span_small large-12 small-12 columns nopadding height_inherit">
+              <a href="{{ gp.url }}">google</a>
+            </span>  
+          </div>
+        </div>
+      </div>
+      <!-- конец панели login -->
+
+      <!-- панель выбранные вещи-->
+      <div class="large-8 small-6 columns height_inherit nopadding">
+        <div class="bag_wrapper large-12 small-12 columns height_inherit nopadding font_inherit transition" tabindex="2">
+
+          <div class="large-2 small-2 columns nopadding bag_ico_wrapper">
+            <span>
+              <img src="/media/Иконки корзина и человек.png" alt="корзинка">
+            </span>
+          </div>
+
+          <div class="large-4 small-4 columns nopadding">
+            <span class="span_small">товары</span>            
+          </div>
+
+          <div class="large-3 small-3 columns nopadding">
+            <span class="span_small">[0 шт.]</span>
+          </div>
+          
+          <div class="large-3 small-3 columns nopadding">
+            <span class="span_small">0 руб.</span>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- панель выбранные вещи-->
+  </div>
+</div>

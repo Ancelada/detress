@@ -33,121 +33,13 @@
   <link rel="stylesheet" href="{% static 'css/top/banner.css' %}">
   <link rel="stylesheet" href="{% static 'css/content/header.css' %}">
   <link rel="stylesheet" href="{% static 'css/content/units.css' %}">
+  <link rel="stylesheet" href="{% static 'css/content/description.css'%}">
+  <link rel="stylesheet" href="{% static 'css/bottom/bottombar.css' %}">
 </head>
 <body>
 
-  <!-- topbar panel -->  
-  <div class="topbar_wrapper color_fff font_garamond transition uppercase large-12 small-12 columns nopadding">
-    <div class="row topbar_content nopadding">
-
-      <div class="topbar_content_left transition large-3 small-12 columns height_inherit nopadding">
-        <div class="large-11 small-11 columns nopadding">
-          <input type="text" class="input_small" placeholder="поиск, напишите что Вы ищите...">          
-        </div>
-        <div class="large-1 small-1 columns nopadding">
-          <div class="search_icon height_inherit">
-            <i class="fi-magnifying-glass color_000">
-              
-            </i>
-          </div>
-        </div>
-      </div>
-
-      <div class="topbar_content_center large-5 small-12 columns height_inherit nopadding">
-      </div>
-
-      
-      <div class="topbar_content_right large-4 small-12 columns height_inherit nopadding">
-
-        <!-- панель login -->
-        <div class="large-4 small-6 columns height_inherit nopadding">
-          <div class="login_wrapper large-12 small-12 columns height_inherit nopadding font_inherit transition" tabindex="1">
-            <div class="triangle_wrapper large-2 small-2 columns nopadding">
-              <div class="triangle">
-              </div>
-            </div>
-            <div class="large-10 small-10 columns nopadding">
-              <span class="span_small">войти через</span>            
-            </div>
-          </div>
-
-          <div class="login_content large-12 small-12 columns nopadding">
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                вконтакте
-              </span>
-            </div>
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                одноклассники
-              </span>  
-            </div>
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                facebook
-              </span>  
-            </div>
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                twitter
-              </span>  
-            </div>
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                mail.ru
-              </span>  
-            </div>
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                яндекс
-              </span>  
-            </div>
-
-            <div class="large-12 small-12 columns nopadding login_content_line">
-              <span class="span_small color_000 large-12 small-12 columns nopadding height_inherit">
-                google
-              </span>  
-            </div>
-          </div>
-        </div>
-        <!-- конец панели login -->
-
-        <!-- панель выбранные вещи-->
-        <div class="large-8 small-6 columns height_inherit nopadding">
-          <div class="bag_wrapper large-12 small-12 columns height_inherit nopadding font_inherit transition" tabindex="2">
-
-            <div class="large-2 small-2 columns nopadding bag_ico_wrapper">
-              <span>
-                <img src="/media/Иконки корзина и человек.png" alt="корзинка">
-              </span>
-            </div>
-
-            <div class="large-4 small-4 columns nopadding">
-              <span class="span_small">товары</span>            
-            </div>
-
-            <div class="large-3 small-3 columns nopadding">
-              <span class="span_small">[0 шт.]</span>
-            </div>
-            
-            <div class="large-3 small-3 columns nopadding">
-              <span class="span_small">0 руб.</span>
-            </div>
-
-          </div>
-        </div>
-        
-      </div>
-
-      <!-- панель выбранные вещи-->
-    </div>
-  </div>
+  <!-- topbar panel -->
+  {{top.topbar}}
   <!-- endtopbar_panel-->
 
   <div class="large-12 small-12 columns nopadding">
@@ -161,7 +53,7 @@
             </i>
           </div>
           <div class="large-12 small-9 columns height_inherit logo_wrapper nopadding">
-            <h1 class="logo_content vera_crouz height_inherit">
+            <h1 class="logo_content vera_crouz height_inherit" style="background-image:url('/media/НОВАЯ-КЛЯКСА.png')">
               <span class="large-12 small-12 columns logo_content_upper">detress</span>
               <span class="large-12 small-12 columns logo_content_lower">wedding</span>
             </h1>
@@ -184,12 +76,13 @@
       <!-- content -->
       {{content}}
       <!-- end content -->
+      
+      <!-- bottombar -->
+      {{bottombar}}
+      <!-- end bottombar -->
     </div>
   </div>
   {% csrf_token %}
-
-  {% block content %}
-  {% endblock %}
 
   <!-- конец блока содержания-->
   <script>
@@ -229,4 +122,5 @@
     }
   </script>
   <script src="{% static 'js/topbar/menubar.js' %}"></script>
+  <script src="{% static 'js/topbar/banner.js' %}"></script>
 </body>

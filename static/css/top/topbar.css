@@ -38,7 +38,11 @@
 	height:25px;
 }
 
-.login_content_line span:hover{
+.login_content_line span a{
+	color: #361134;
+}
+
+.login_content_line span a:hover{
 	color:#b0228c;
 }
 
@@ -62,6 +66,10 @@
 }
 
 .login_wrapper:focus + .login_content{
+	display:block;
+}
+
+.login_content:hover{
 	display:block;
 }
 

@@ -38,12 +38,16 @@
 
 /* для смартфонов */
 @media screen and (min-width: 640px) and (max-width: 1023px) {
+	
+	.banner_mobile_up{
+		background-color:#fff;
+	}
+
 	.banner_item_text{
 		line-height: 1;
 	}
 	.banner_item{
 		height:250px;
-		border-bottom:1px solid #a4baba;
 	}
 	.banner_item_image_wrapper img{
 		height:150px;
