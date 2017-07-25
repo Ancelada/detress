@@ -29,3 +29,12 @@ class Banner(MPTTModel):
 
 	def __str__(self):
 		return self.name
+
+class Gallery(MPTTModel):
+	name = models.CharField(max_length=100, null=True, blank=True)
+	unit = models.ForeignKey(Unit, null=True, on_delete=models.CASCADE)
+	image = models.ImageField(upload_to='gallery', blank=True, null=True)
+	parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
+
+	def __str__(self):
+		return '{0}|{1}'.format(self.name, self.image)

@@ -13,3 +13,7 @@ admin.site.register(Unit, UnitAdmin)
 class BannerAdmin(DjangoMpttAdmin):
 	pass
 admin.site.register(Banner, BannerAdmin)
+
+class GalleryAdmin(DjangoMpttAdmin):
+	pass
+admin.site.register(Gallery, GalleryAdmin)

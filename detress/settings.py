@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_mysql',
     'django_mptt_admin',
+    'django_cleanup',
     'mainapp',
     'oauth',
 ]

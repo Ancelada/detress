@@ -7,10 +7,12 @@ p{
 }
 
 .logo_content_upper{
+	color:#361134;
 	padding-right:140px;
 }
 
 .logo_content_lower{
+	color:#361134;
 	padding-left:140px;
 }
 
@@ -61,11 +63,15 @@ body{
 }
 
 a{
-	color:#e70078;
+	color:#ed3e6d;
 }
 
 a:hover{
-	color:#c73615;
+	color:#b0228c;
+}
+
+a:focus{
+	color:#b0228c;
 }
 
 .font_inherit{
@@ -126,9 +132,25 @@ input[type="text"].input_small{
 	/* letter-spacing: 0px; */
 }
 
+.garamond_subusual{
+	font-size:16px;
+}
+
 .span_small{
 	font-size:12px;
 	/* letter-spacing: 0px; */
+}
+
+.background_fff{
+	background-color:#fff;
+}
+
+.color_grey{
+	color:#a4baba;
+}
+
+.color_purple{
+	color:#361134;
 }
 
 .color_fff{
@@ -137,6 +159,10 @@ input[type="text"].input_small{
 
 .color_000{
 	color:#000;
+}
+
+.color_pink{
+	color:#ed3e6d;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -213,5 +239,8 @@ input[type="text"].input_small{
 	.span_subusual{
 		font-size:35px;
 		/* letter-spacing: 0px; */
+	}
+	.garamond_subusual{
+		font-size:38px;
 	}
 }

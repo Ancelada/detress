@@ -1,3 +1,72 @@
 .bottombar_wrapper{
 	background-color:#fff;
 }
+.trapezoid_wrapper{
+	text-align: center;
+}
+.trapezoid_upper{
+	border-bottom: 70px solid #ffe6de;
+	border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	height: 0;
+	width: 300px;
+	margin:auto;
+}
+
+.trapezoid_lower{
+	border-top: 80px solid #ffe6de;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	height: 0;
+	width: 300px;
+	margin:auto;	
+}
+
+.bottombar_telephone{
+	padding-top:15px;
+}
+
+.bottombar_email{
+	margin-top:-60px;
+}
+
+.bottom_instagram_wrapper{
+	float:right;
+}
+
+/* для смартфонов */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+
+	.trapezoid_upper{
+		border-bottom: 140px solid #ffe6de;
+		border-left: 140px solid transparent;
+		border-right: 140px solid transparent;
+		width: 600px;
+	}
+
+	.trapezoid_lower{
+		border-top: 160px solid #ffe6de;
+		border-left: 160px solid transparent;
+		border-right: 160px solid transparent;
+		height: 0;
+		width: 600px;
+		margin:auto;	
+	}
+
+	.bottombar_email{
+		margin-top:-120px;
+	}
+
+	.bottombar_left{
+		text-align: center;
+		margin-bottom:15px;
+	}
+	
+	.bottom_right_wrapper{
+		text-align: center;
+	}
+
+	.bottom_instagram_wrapper i{
+		font-size:72px;
+	}
+}

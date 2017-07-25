@@ -8,6 +8,7 @@ class PageInterpreter():
 			'mainpage': {
 				'name': 'одежда для невест',
 				'html': 'page_content/mainpage.html',
+				'gallery': self.__build_gallery(),
 			}
 		}
 
@@ -22,5 +23,11 @@ class PageInterpreter():
 			'units': units,
 			'page_text': page_unit,
 		})
+
+		return result
+
+	def __build_gallery(self):
+		
+		result = []
 
 		return result

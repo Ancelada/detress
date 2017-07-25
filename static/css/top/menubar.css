@@ -1,9 +1,10 @@
 .content_item span{
+	color:#361134;
 	cursor:pointer;
 }
 
 .content_item span:hover{
-	color:#a4baba;
+	color:#b0228c;
 }
 
 .content_wrapper{
