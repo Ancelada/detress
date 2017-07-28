@@ -1,3 +1,7 @@
+h4{
+	font-size:26px;
+}
+
 p{
 	line-height: 1;
 }
@@ -22,7 +26,8 @@ p{
 
 .page_content{
 	/* min-height: 100%; */
-
+	/* margin-top:-150%; */
+	/* display:none; */
 }
 
 .nomargin{
@@ -145,6 +150,14 @@ input[type="text"].input_small{
 	background-color:#fff;
 }
 
+.background_grey{
+	background-color: #a4baba;
+}
+
+.background_purple{
+	background-color:#361134;
+}
+
 .color_grey{
 	color:#a4baba;
 }
@@ -242,5 +255,9 @@ input[type="text"].input_small{
 	}
 	.garamond_subusual{
 		font-size:38px;
+	}
+
+	h4{
+		font-size:62px;
 	}
 }

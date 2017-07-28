@@ -35,8 +35,15 @@
   <link rel="stylesheet" href="{% static 'css/content/units.css' %}">
   <link rel="stylesheet" href="{% static 'css/content/description.css'%}">
   <link rel="stylesheet" href="{% static 'css/bottom/bottombar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/loading.css' %}">
 </head>
 <body>
+
+  <div class="large-12 small-12 columns login_modal_wrapper">
+    <div class="loading_ico">
+      <i class="fi-loop size-48"></i>
+    </div>
+  </div>
 
   <!-- topbar panel -->
   {{top.topbar}}
@@ -137,4 +144,6 @@
   </script>
   <script src="{% static 'js/topbar/menubar.js' %}"></script>
   <script src="{% static 'js/topbar/banner.js' %}"></script>
+  <script src="{% static 'js/content/gallery.js' %}"></script>
+  <script src="{% static 'js/common/effects.js' %}"></script>
 </body>

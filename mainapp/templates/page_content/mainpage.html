@@ -1,73 +1,167 @@
-<div class="large-12 small-12 columns nopadding page_head text_center">
-	<h1 class="font_garamond page_head_text uppercase">{{page_head.name}}</h1>
-	<div class="large-12 small-12 columns">
-		<div class="large-5 small-5 columns page_head_line">
-			
-		</div>
+<div class="page_content">
+	<div class="large-12 small-12 columns nopadding page_head text_center">
+		<h1 class="font_garamond page_head_text uppercase">{{page_head.name}}</h1>
+		<div class="large-12 small-12 columns">
+			<div class="large-5 small-5 columns page_head_line">
+				
+			</div>
 
-		<div class="large-2 small-2 columns nopadding ico_decoration">
-			<img src="/media/Завихрюшка.png" alt="завихрюшка">
-		</div>
+			<div class="large-2 small-2 columns nopadding ico_decoration">
+				<img src="/media/Завихрюшка.png" alt="завихрюшка">
+			</div>
 
-		<div class="large-5 small-5 columns page_head_line">
-			
+			<div class="large-5 small-5 columns page_head_line">
+				
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="large-12 small-12 columns nopadding page_units">
-	{% for unit in units %}
-		<div class="large-4 small-6 columns nopadding page_unit">
-			<div class="large-12 small-12 columns page_unit_content height_inherit nopadding" style="background-image:url('/media/{{unit.image}}')">
-
+	<div class="large-12 small-12 columns nopadding page_units">
+		{% for unit in units %}
+			<div class="large-4 small-6 columns nopadding page_unit">
+				<div class="large-12 small-12 columns page_unit_content height_inherit nopadding" style="background-image:url('/media/{{unit.image}}')">
 
 
-				<div class="large-12 small-12 columns page_unit_content_hoverable transition">
+
+					<div class="large-12 small-12 columns page_unit_content_hoverable transition">
+						
+					</div>
+
+					<div class="large-12 small-12 columns page_unit_content_wrapper nopadding height_inherit transition">
+
+						<div class="large-12 small-12 columns nopadding page_unit_content_header text_center">
+							<h2 class="vera_crouz">
+								<a href="#" style="color:inherit;">{{unit.name|capfirst}}</a>
+							</h2>
+						</div>
+
+						<div class="large-12 small-12 columns page_unit_content_description text_center">
+							<span class="span_large font_garamond">{{unit.description|safe}}</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="large-12 small-12 columns nopadding page_description_wrapper">
+		<div class="large-12 small-12 column page_description_content">
+			
+			<div class="large-12 small-12 columns nopadding page_description_content_inner">
+				
+				<div class="large-12 small-12 columns page_description_header nopadding">
+					<h3 class="vera_crouz nomargin">{{page_text.name|capfirst}}</h3>
+				</div>
+
+				<div class="large-12 small-12 columns page_description_text nopadding">
+					<span class="span_large font_garamond">{{page_text.description|safe}}</span>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="large-12 small-12 columns gallery_wrapper background_fff">
+		<div class="large-6 small-12 columns gallery_left background_grey height_inherit nopadding">
+			<div class="large-8 small-8 columns height_inherit background_purple gallery_left_left nopadding">
+				<div class="large-12 small-12 columns height_inherit background_grey nopadding">
+
+					<div class="large-12 small-12 columns background_fff gallery_unit_large nopadding transition gallery_bucket">
+
+
+					</div>	
+					
+
+					<div class="large-12 small-12 columns nopadding gallery_left_left_bottom">
+						<div class="large-6 small-6 columns gallery_left_left_bottom_left nopadding">
+							<div class="large-12 small-12 columns background_fff gallery_unit nopadding transition gallery_bucket">
+
+								
+							</div>	
+						</div>
+
+						<div class="large-6 small-6 columns gallery_left_left_bottom_right nopadding">
+							<div class="large-12 small-12 columns background_fff gallery_unit nopadding gallery_bucket">
+					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="large-4 small-4 columns height_inherit background_purple gallery_left_right nopadding">
+				<div class="large-12 small-12 columns background_grey gallery_unit nopadding gallery_bucket">
 					
 				</div>
+				<div class="large-12 small-12 columns background_grey gallery_unit nopadding gallery_bucket">
+					
+				</div>
+				<div class="large-12 small-12 columns background_grey gallery_unit nopadding gallery_bucket">
+					
+				</div>
+			</div>
+		</div>
 
-				<div class="large-12 small-12 columns page_unit_content_wrapper nopadding height_inherit transition">
+		<div class="large-6 small-12 columns gallery_right background_grey nopadding">
+			<div class="large-8 small-8 columns height_inherit background_purple gallery_left_left nopadding">
+				<div class="large-12 small-12 columns height_inherit background_grey nopadding">
 
-					<div class="large-12 small-12 columns nopadding page_unit_content_header text_center">
-						<h2 class="vera_crouz">
-							<a href="#" style="color:inherit;">{{unit.name|capfirst}}</a>
-						</h2>
+					<div class="large-12 small-12 columns nopadding gallery_left_left_bottom">
+						<div class="large-6 small-6 columns gallery_left_left_bottom_left nopadding">
+							<div class="large-12 small-12 columns background_fff gallery_unit nopadding gallery_bucket">
+					
+							</div>	
+						</div>
+
+						<div class="large-6 small-6 columns gallery_left_left_bottom_right nopadding">
+							<div class="large-12 small-12 columns background_fff gallery_unit nopadding gallery_bucket">
+					
+							</div>
+						</div>
 					</div>
 
-					<div class="large-12 small-12 columns page_unit_content_description text_center">
-						<span class="span_large font_garamond">{{unit.description|safe}}</span>
+					<div class="large-12 small-12 columns background_fff gallery_unit_large nopadding gallery_bucket">
+						
 					</div>
 
 				</div>
+			</div>
 
-
-
-
-
-
+			<div class="large-4 small-4 columns height_inherit background_purple gallery_left_right nopadding">
+				<div class="large-12 small-12 columns background_grey gallery_unit nopadding gallery_bucket">
+					
+				</div>
+				<div class="large-12 small-12 columns background_grey gallery_unit nopadding gallery_bucket">
+					
+				</div>
+				<div class="large-12 small-12 columns background_grey gallery_unit nopadding gallery_bucket">
+					
+				</div>
 			</div>
 		</div>
-	{% endfor %}
-</div>
-
-<div class="large-12 small-12 columns nopadding page_description_wrapper">
-	<div class="large-12 small-12 column page_description_content">
-		
-		<div class="large-12 small-12 columns nopadding page_description_content_inner">
-			
-			<div class="large-12 small-12 columns page_description_header nopadding">
-				<h3 class="vera_crouz nomargin">{{page_text.name|capfirst}}</h3>
-			</div>
-
-			<div class="large-12 small-12 columns page_description_text nopadding">
-				<span class="span_large font_garamond">{{page_text.description|safe}}</span>
-			</div>
-
-		</div>
-
+	</div>
+	<div class="gallery_holder" style="display:none;">
+		{% for girl in gallery_array %}
+			{% for photo in girl.photoes %}
+				{{photo.html}}
+			{% endfor %}
+		{% endfor %}
 	</div>
 </div>
-
-<div class="large-12 small-12 columns nopadding gallery_wrapper">
-	
-</div>
+<script>
+	var gallery_array = {{json_gallery_array|safe}};
+	$.each($('.gallery_unit_image_wrapper'), function(i){
+		gallery_unit = $(this)
+		$.each(gallery_array, function(j){
+			girl = gallery_array[j];
+			$.each(girl['photoes'], function(key){
+				if (girl['photoes'][key]['gallery_id'] == gallery_unit.attr('data-id')){
+					girl['photoes'][key]['html'] = gallery_unit;
+				}
+			});
+		})
+	});
+</script>

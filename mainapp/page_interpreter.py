@@ -1,5 +1,9 @@
+import json
+import random, copy
+
 from django.template.loader import render_to_string
 from .models import *
+from .gallery import Gallery
 
 class PageInterpreter():
 
@@ -8,7 +12,7 @@ class PageInterpreter():
 			'mainpage': {
 				'name': 'одежда для невест',
 				'html': 'page_content/mainpage.html',
-				'gallery': self.__build_gallery(),
+				'gallery_array': Gallery().build_gallery('page_content/gallery_unit.html'),
 			}
 		}
 
@@ -22,12 +26,8 @@ class PageInterpreter():
 			'page_head': page_unit,
 			'units': units,
 			'page_text': page_unit,
+			'json_gallery_array': self.page['mainpage']['gallery_array']['json'],
+			'gallery_array': self.page['mainpage']['gallery_array']['result'],
 		})
-
-		return result
-
-	def __build_gallery(self):
-		
-		result = []
 
 		return result

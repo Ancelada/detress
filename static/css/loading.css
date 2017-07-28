@@ -1,0 +1,24 @@
+.login_modal_wrapper{
+	position:fixed;
+	min-height:100%;
+	background-color:rgba(255, 230, 222, 1);
+	z-index: 101;
+	display:table;
+	text-align: center;
+}
+
+.loading_ico{
+	display:table-cell;
+	vertical-align: middle;
+	color:#ed3e6d;
+	-webkit-animation: rotating 0.9s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
