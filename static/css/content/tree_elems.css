@@ -1,0 +1,27 @@
+.tree_elems_wrapper{
+	height:50px;
+	
+}
+
+.tree_elem{
+	display:table;
+	text-align: center;
+}
+
+.tree_elem a{
+	display:table-cell;
+	vertical-align: middle;
+	/* text-decoration: underline; */
+}
+
+.tree_elem_text{
+	display:table-cell;
+	vertical-align: middle;
+}
+
+/* для смартфонов */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+	.tree_elems_wrapper{
+		height:150px;
+	}	
+}

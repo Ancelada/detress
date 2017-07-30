@@ -1,3 +1,18 @@
+.vk_ico_wrapper{
+	position:absolute;
+	height:28px;
+	width:28px;
+}
+
+.vk_ico{
+	margin-top:11px;
+	fill:#ed3e6d;
+}
+
+.vk_ico:hover{
+	fill:#b0228c
+}
+
 .bottombar_wrapper{
 	background-color:#fff;
 }
@@ -68,5 +83,14 @@
 
 	.bottom_instagram_wrapper i{
 		font-size:72px;
+	}
+
+	.vk_ico_wrapper{
+		height:56px;
+		width:56px;
+	}
+
+	.vk_ico{
+		margin-top:22px;
 	}
 }

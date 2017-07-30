@@ -104,7 +104,6 @@
 }
 
 .page_units{
-	background-color:#ccc;
 }
 
 /* для смартфонов */
@@ -117,7 +116,7 @@
 	}	
 
 	.page_unit_content_header h2{
-		font-size:90px;
+		font-size:120px;
 	}
 
 	.page_unit_content_wrapper:hover{

@@ -1,0 +1,68 @@
+<div class="page_content">
+	{{tree_elems_html}}
+	<div class="large-12 small-12 columns nopadding page_head text_center">
+		<h1 class="font_garamond page_head_text uppercase">{{page_head.name}}</h1>
+		<div class="large-12 small-12 columns">
+			<div class="large-5 small-5 columns page_head_line">
+				
+			</div>
+
+			<div class="large-2 small-2 columns nopadding ico_decoration">
+				<img src="/media/Завихрюшка.png" alt="завихрюшка">
+			</div>
+
+			<div class="large-5 small-5 columns page_head_line">
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="large-12 small-12 columns nopadding page_units background_fff">
+		{% for unit in units %}
+			<div class="large-4 small-12 columns nopadding page_unit" style="float:left;">
+				<div class="large-12 small-12 columns page_unit_content height_inherit nopadding" style="background-image:url('/media/{{unit.image}}')" data-id="/level/{{unit.level}}/unit/{{unit.id}}">
+
+
+
+					<div class="large-12 small-12 columns page_unit_content_hoverable transition">
+						
+					</div>
+
+					<div class="large-12 small-12 columns page_unit_content_wrapper nopadding height_inherit transition">
+
+						<div class="large-12 small-12 columns nopadding page_unit_content_header text_center">
+							<h2 class="vera_crouz">
+								<a href="/level/{{unit.level}}/unit/{{unit.id}}/" style="color:inherit;">{{unit.name|capfirst}}</a>
+							</h2>
+						</div>
+
+						<div class="large-12 small-12 columns page_unit_content_description text_center">
+							<span class="span_large font_garamond">{{unit.description|safe}}</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="large-12 small-12 columns nopadding page_description_wrapper">
+		<div class="large-12 small-12 column page_description_content">
+			
+			<div class="large-12 small-12 columns nopadding page_description_content_inner">
+				
+				<div class="large-12 small-12 columns page_description_header nopadding">
+					<h3 class="vera_crouz nomargin">{{page_text.name|capfirst}}</h3>
+				</div>
+
+				<div class="large-12 small-12 columns page_description_text nopadding">
+					<span class="span_large font_garamond">{{page_text.description|safe}}</span>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+</div>

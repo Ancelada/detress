@@ -1,3 +1,8 @@
+.vk_ico_logobar{
+	margin-top:11px;
+	fill:#a4baba;
+}
+
 .logobar_instagram_wrapper a{
 	color:#a4baba;
 }
@@ -79,4 +84,5 @@
 	.logobar_right_wrapper{
 		display:none;
 	}
+
 }

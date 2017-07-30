@@ -1,7 +1,7 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 
-class Mainbar(MPTTModel):
+class Unit(MPTTModel):
 	name = models.CharField(max_length=400)
 	description = models.TextField(null=True, blank=True)
 	short_description = models.TextField(null=True, blank=True)
@@ -12,15 +12,18 @@ class Mainbar(MPTTModel):
 	def __str__(self):
 		return self.name
 
-class Unit(MPTTModel):
-	name = models.CharField(max_length=400)
-	description = models.TextField(null=True, blank=True)
-	short_description = models.TextField(null=True, blank=True)
-	parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
-	image = models.ImageField(blank=True, null=True)
+Unit._meta.namespace = 'Unit'
+Unit._meta.to_params_fields = [
+	('name', ''),
+	('description', ''),
+	('short_description', ''),
+	('image', ''),
+	('cost', ''),
+]
 
-	def __str__(self):
-		return self.name
+Unit._meta.to_child_fields = [
+	('unit_set', 'Unit'),
+]
 
 class Banner(MPTTModel):
 	name = models.CharField(max_length=100)

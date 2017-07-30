@@ -38,9 +38,9 @@ class Base():
 
 	def build_menubar(self):
 		
-		menubar_header_units = Mainbar.objects.filter(level=0).values('name', 'id', 'image')
+		menubar_header_units = Unit.objects.filter(level=1).values('name', 'id', 'image')
 
-		menubar_subheaders_units = Mainbar.objects.filter(
+		menubar_subheaders_units = Unit.objects.filter(
 			parent_id__in=[unit['id'] for unit in menubar_header_units]
 		).values('parent_id', 'name', 'id', 'image')
 
@@ -86,3 +86,7 @@ class Base():
 
 	def build_bottombar(self):
 		return render_to_string('bottom/bottombar.html')
+
+
+	def get_table_fields(self, table):
+		return [field.name for field in table._meta.get_fields()]
